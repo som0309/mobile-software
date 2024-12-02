@@ -12,6 +12,8 @@ import com.example.proj_mainhome.screens.MealInputScreen
 import com.example.proj_mainhome.screens.MealViewScreen
 import com.example.proj_mainhome.screens.Analysis1Screen
 import com.example.proj_mainhome.screens.Analysis2Screen
+import com.example.proj_mainhome.screens.DescriptionScreen
+import com.example.proj_mainhome.screens.LoadingScreen
 import com.example.proj_mainhome.ui.theme.Proj_mainhomeTheme
 
 class MainActivity : ComponentActivity() {
@@ -22,8 +24,16 @@ class MainActivity : ComponentActivity() {
                 val navController = rememberNavController() // 네비게이션 컨트롤러 생성
                 NavHost(
                     navController = navController,
-                    startDestination = "home"
+                    startDestination = "loading"
                 ) {
+                    // 로딩 화면
+                    composable("loading") {
+                        LoadingScreen(navController) // 로딩 화면 호출
+                    }
+                    // 설명 화면
+                    composable("description") {
+                        DescriptionScreen(navController) // 설명 화면 호출
+                    }
                     composable("home") {
                         HomeScreen(navController) // HomeScreen 호출
                     }
