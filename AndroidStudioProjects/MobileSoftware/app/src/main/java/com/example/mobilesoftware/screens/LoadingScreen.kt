@@ -1,5 +1,6 @@
 package com.example.mobilesoftware.screens
 
+import android.util.Log
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
@@ -12,10 +13,19 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import com.example.mobilesoftware.R
+import com.example.mobilesoftware.data.MealManager
 import kotlinx.coroutines.delay
 
 @Composable
-fun LoadingScreen(navController: NavController) {
+fun LoadingScreen(mealManager: MealManager, navController: NavController) {
+    mealManager.generateMealData()
+    val meals = mealManager.getAllMeals()
+
+
+//    // meals 리스트의 내용을 하나씩 출력
+//    for (meal in meals) {
+//        Log.d("MealManager", "Meal: ${meal.date}, ${meal.mealType}, ${meal.mealType}, ${meal.restaurant}, ${meal.foodImage}, ${meal.foodName}, ${meal.foodReview}, ${meal.foodCost}")
+//    }
     // 로딩 화면 UI
     Box(
         modifier = Modifier

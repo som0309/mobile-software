@@ -4,15 +4,11 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.runtime.remember
-import androidx.navigation.NavType
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import androidx.navigation.navArgument
-import com.example.mobilesoftware.data.Meal
 import com.example.mobilesoftware.data.MealManager
 import com.example.mobilesoftware.screens.Analysis1Screen
-//import com.example.mobilesoftware.screens.Analysis1Screen
 import com.example.mobilesoftware.screens.Analysis2Screen
 import com.example.mobilesoftware.screens.DescriptionScreen
 import com.example.mobilesoftware.screens.LoadingScreen
@@ -21,7 +17,6 @@ import com.example.mobilesoftware.screens.MealInfo
 import com.example.mobilesoftware.screens.MealListScreen
 import com.example.mobilesoftware.screens.RestaurantButtons
 import com.example.mobilesoftware.ui.theme.MobileSoftwareTheme
-import com.google.gson.Gson
 import java.text.SimpleDateFormat
 import java.util.Date
 
@@ -39,7 +34,7 @@ class MainActivity : ComponentActivity() {
                 ) {
                     // 로딩 화면
                     composable("loading") {
-                        LoadingScreen(navController) // 로딩 화면 호출
+                        LoadingScreen(mealManager, navController) // 로딩 화면 호출
                     }
                     // 설명 화면
                     composable("description") {

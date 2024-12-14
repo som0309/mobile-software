@@ -76,7 +76,7 @@ fun Analysis1Screen(mealManager: MealManager) {
         Spacer(modifier = Modifier.height(16.dp))
 
         // 간식/음료 박스
-        CaloriesAnalysisBox(currentMonth.value, "간식/음료", mealManager)
+        CaloriesAnalysisBox(currentMonth.value, "간식 or 음료", mealManager)
     }
 }
 
@@ -330,15 +330,15 @@ fun CaloriesAnalysisBox(
             ) {
                 Column(horizontalAlignment = Alignment.CenterHorizontally) {
                     Text(text = "평균", fontSize = 16.sp, color = Color.Black)
-                    Text(text = "$averageCalorie 원", fontSize = 18.sp, color = Color.Gray)
+                    Text(text = "$averageCalorie kcal", fontSize = 18.sp, color = Color.Gray)
                 }
                 Column(horizontalAlignment = Alignment.CenterHorizontally) {
                     Text(text = "최고", fontSize = 16.sp, color = Color.Black)
-                    Text(text = "$maxCalorie 원", fontSize = 18.sp, color = Color.Gray)
+                    Text(text = "$maxCalorie kcal", fontSize = 18.sp, color = Color.Gray)
                 }
                 Column(horizontalAlignment = Alignment.CenterHorizontally) {
                     Text(text = "최저", fontSize = 16.sp, color = Color.Black)
-                    Text(text = "$minCalorie 원", fontSize = 18.sp, color = Color.Gray)
+                    Text(text = "$minCalorie kcal", fontSize = 18.sp, color = Color.Gray)
                 }
             }
         }

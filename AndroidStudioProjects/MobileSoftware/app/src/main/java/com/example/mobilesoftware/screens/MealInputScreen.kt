@@ -222,9 +222,6 @@ fun MealInfo(
                 foodReview = ""
                 foodCost = ""
 
-//                navController.popBackStack()
-//                navController.popBackStack()
-
                 navController.navigate("home")
             }
         ) {

@@ -16,7 +16,6 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.mobilesoftware.data.MealManager
-import java.time.LocalDate
 import java.time.YearMonth
 import java.time.format.TextStyle
 import java.util.*
@@ -73,7 +72,7 @@ fun Analysis2Screen(mealManager: MealManager) {
         Spacer(modifier = Modifier.height(16.dp))
 
         // 간식/음료 박스
-        CostAnalysisBox(currentMonth.value, "간식/음료", mealManager)
+        CostAnalysisBox(currentMonth.value, "간식 or 음료", mealManager)
     }
 }
 

@@ -280,7 +280,7 @@ fun HomeScreen(mealManager: MealManager, navController: NavController = remember
                             verticalArrangement = Arrangement.SpaceEvenly // 상하 균등 간격
                         ) {
                             Text(
-                                text = "식사 분석: 한달 칼로리 계산",
+                                text = "식사 분석: 한달 칼로리 분석",
                                 fontSize = 10.sp,
                                 color = Color.Black,
                                 modifier = Modifier.align(Alignment.Start)
@@ -322,7 +322,7 @@ fun HomeScreen(mealManager: MealManager, navController: NavController = remember
                             verticalArrangement = Arrangement.SpaceEvenly // 상하 균등 간격
                         ) {
                             Text(
-                                text = "식사 분석: 한달 비용 계산",
+                                text = "식사 분석: 한달 비용 분석",
                                 fontSize = 10.sp,
                                 color = Color.Black,
                                 modifier = Modifier.align(Alignment.Start)
